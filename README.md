@@ -30,6 +30,12 @@ Using callback functions is an effective way to write declarative, functional Ja
 - Explain what a higher order function is
 - Use a `for` loop
 
+### The Call Stack
+
+We say that a function **takes in arguments** and **returns** something to us. You can imagine JavaScript control flow as a person talking on the phone with your program. When you call a function, it's like JS puts the main program on hold and contacts the function. If another function is called, JS puts the first function on hold to contact the new one. When the call to that function finishes, JS returns to the previous call.
+
+To keep track of the functions JavaScript has on hold, it uses a **call stack**. As JavaScript calls a new function, it pushes the function and its important variables onto the call stack. When a function returns, it pops that function off of the top of the call stack. The return value is "substituted in" for the function call after the function returns.
+
 
 
 ```js-->
